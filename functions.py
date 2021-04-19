@@ -5,14 +5,20 @@
 # display a passed file.
 ######################
 
+import sys
+import os.path
 
 def count_lines(filename):
+    line_count = 0
+    fin = open(sys.argv[1], 'r')
+    for line in fin:
+        line_count += 1
+    return(line_count)
     # open the file
     # count the lines in the file USING A LOOP
     # close the file
     # return the number of lines
     # don't forget to erase the pass
-    pass
 
 def count_words(line):
     # a line from the file is passed in
