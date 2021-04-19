@@ -16,6 +16,10 @@ def count_lines(filename):
     return(line_count)
 
 def count_words(line):
+    words = line.split(' ')
+    if words[0]=='':
+        words.pop()
+    return len(words)
     # a line from the file is passed in
     # use any method you like to counts the words
     # assume one and only one space between words
@@ -23,7 +27,6 @@ def count_words(line):
     # return the word count
     # hint: you can do it in one line of code
     # don't forget to erase the pass
-    pass
 
 def count_characters(line):
     # a line from the file is passed in
@@ -40,7 +43,10 @@ def dispay_file(filename):
     for text in fin:
         text = text[:-1]
         line_count += 1
-        print(" ", line_count,":", text)
+        if text == '':
+            print(" ", line_count, ":", "[blank line]")
+        else:
+            print(" ", line_count,":", text, "[", count_words(text), "words,")
     fin.close()
     
     # open the file
