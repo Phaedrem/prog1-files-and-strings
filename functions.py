@@ -1,6 +1,10 @@
-#
-# your comment header here
-#
+######################
+# Name: Darren Bowers
+# Coding 08
+# Purpose: Program to check line count, word count and character count then
+# display a passed file.
+######################
+
 
 def count_lines(filename):
     # open the file

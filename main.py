@@ -1,6 +1,9 @@
-#
-# your comment header here
-#
+######################
+# Name: Darren Bowers
+# Coding 08
+# Purpose: Program to check line count, word count and character count then
+# display a passed file.
+######################
 
 import sys
 import os.path
