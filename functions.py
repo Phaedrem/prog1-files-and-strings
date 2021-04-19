@@ -41,11 +41,14 @@ def dispay_file(filename):
     fin = open(sys.argv[1], 'r')
     text = 0
     line_count = 0
-    spaces = 0
     index = 0
     for text in fin:
+        spaces = 0
         text = text[:-1]
         line_count += 1
+        for i in range(len(text)):
+                if text[i] == ' ':
+                    spaces += 1
         if text == '':
             print(" ", line_count, ":", "[blank line]")
         else:
