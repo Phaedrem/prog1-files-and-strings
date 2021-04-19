@@ -16,9 +16,9 @@ def main():
             print("In", sys.argv[1], "there are", fn.count_lines(sys.argv[1]), "lines.")
             fn.dispay_file(sys.argv[1])
         else:
-            print(sys.argv[1], "is not a file in the current directory.")
+            print("Error: you did not enter one-and-only-one parameter that is a valid file name.")
     else:
-        print("You must pass in exactly one parameter.")
+        print("Error: you did not enter one-and-only-one parameter that is a valid file name.")
 
 main()
 
