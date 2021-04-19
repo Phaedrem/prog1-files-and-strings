@@ -14,11 +14,6 @@ def count_lines(filename):
     for line in fin:
         line_count += 1
     return(line_count)
-    # open the file
-    # count the lines in the file USING A LOOP
-    # close the file
-    # return the number of lines
-    # don't forget to erase the pass
 
 def count_words(line):
     # a line from the file is passed in
@@ -39,12 +34,20 @@ def count_characters(line):
     pass
     
 def dispay_file(filename):
+    fin = open(sys.argv[1], 'r')
+    text = 0
+    line_count = 0
+    for text in fin:
+        text = text[:-1]
+        line_count += 1
+        print(" ", line_count,":", text)
+    fin.close()
+    
     # open the file
     # using the examples as your guide, make this function
     # display the file exactly as shown in the examples
     # you will need to call count_words() and count_characters()
     # return nothing
     # don't forget to erase the pass
-    pass
 
 
