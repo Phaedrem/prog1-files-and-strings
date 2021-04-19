@@ -20,28 +20,19 @@ def count_words(line):
     if words[0]=='':
         words.pop()
     return len(words)
-    # a line from the file is passed in
-    # use any method you like to counts the words
-    # assume one and only one space between words
-    # assume no trailing or leading spaces
-    # return the word count
-    # hint: you can do it in one line of code
-    # don't forget to erase the pass
 
 def count_characters(line):
-    stuff = 0
-    return stuff
-    # a line from the file is passed in
-    # count the characters in the line USING A LOOP
-    # assume anything not a space is a character
-    # return the number of characters (not counting spaces)
-    # don't forget to erase the pass
+    characters = 0
+    for i in line:
+        characters += 1
+        if i == " ":
+            characters += -1
+    return(characters)
     
 def dispay_file(filename):
     fin = open(sys.argv[1], 'r')
     text = 0
     line_count = 0
-    index = 0
     for text in fin:
         spaces = 0
         text = text[:-1]
@@ -55,12 +46,3 @@ def dispay_file(filename):
             print(" ", line_count,":", text, "[", count_words(text), "words,",
             count_characters(text), "characters,", spaces, "spaces ]")
     fin.close()
-    
-    # open the file
-    # using the examples as your guide, make this function
-    # display the file exactly as shown in the examples
-    # you will need to call count_words() and count_characters()
-    # return nothing
-    # don't forget to erase the pass
-
-
