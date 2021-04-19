@@ -29,24 +29,28 @@ def count_words(line):
     # don't forget to erase the pass
 
 def count_characters(line):
+    stuff = 0
+    return stuff
     # a line from the file is passed in
     # count the characters in the line USING A LOOP
     # assume anything not a space is a character
     # return the number of characters (not counting spaces)
     # don't forget to erase the pass
-    pass
     
 def dispay_file(filename):
     fin = open(sys.argv[1], 'r')
     text = 0
     line_count = 0
+    spaces = 0
+    index = 0
     for text in fin:
         text = text[:-1]
         line_count += 1
         if text == '':
             print(" ", line_count, ":", "[blank line]")
         else:
-            print(" ", line_count,":", text, "[", count_words(text), "words,")
+            print(" ", line_count,":", text, "[", count_words(text), "words,",
+            count_characters(text), "characters,", spaces, "spaces ]")
     fin.close()
     
     # open the file
